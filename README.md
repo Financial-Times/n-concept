@@ -44,3 +44,6 @@ n-concept comes with 3 decorators
 `concept-image` retrieves the image for the concept card. It requires the name of the taxonomy for the concept, and the list of articles in an array of objects called `items`, which should be in your data anyway.
 
 The decorator finds an image from the list of articles to be displayed, and if it cannot find one uses a default.
+
+##Pa11y
+`$ make a11y`: Serves page of demo components, on which it runs [Pa11y](http://pa11y.org/) accessibility tests (errors flagging up accessibility infringements), which will also be run as part of the Continuous Integration (CI) process.
