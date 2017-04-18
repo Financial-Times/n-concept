@@ -14,14 +14,14 @@ const viewports = [
 ];
 
 const urls = [
-	`http://localhost:5005`
+	'http://localhost:5005'
 ]
 
 const config = {
 	defaults: {
 		page: {
 			headers: {
-				"Cookie": "next-flags=ads:off,cookieMessage:off; secure=true"
+				'Cookie': 'next-flags=ads:off,cookieMessage:off; secure=true'
 			}
 		},
 		timeout: 25000
@@ -29,8 +29,8 @@ const config = {
 	urls: []
 }
 
-for (viewport of viewports) {
-	for (url of urls) {
+for (let viewport of viewports) {
+	for (let url of urls) {
 		config.urls.push({
 			url: url,
 			viewport: viewport
