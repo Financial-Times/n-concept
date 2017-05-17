@@ -5,7 +5,7 @@ const ResponsiveGridsPresenter = require('./responsive-grids');
 
 /**
 * Combine both presenters for use with concepts
-* @param {String} taxonomy - see ConceptImagePresenter
+* @param {String} directType - see ConceptImagePresenter
 * @param {Object} items - see ConceptImagePresenter
 * @param {Object} show - see ResponsiveGridsPresenter
 **/
@@ -16,7 +16,7 @@ class ConceptPresenter {
 	get imageUrl () {
 		if (this.data) {
 			const image = new ConceptImagePresenter({
-				taxonomy: this.data.taxonomy,
+				directType: this.data.directType,
 				items: this.data.items
 			});
 			return image.imageUrl;
