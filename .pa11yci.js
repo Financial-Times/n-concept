@@ -5,7 +5,7 @@ const viewports = process.env.PA11Y_VIEWPORTS || [
 	}
 ];
 
-const urls = ['http://local.ft.com:5005/'];
+const urls = ['http://localhost:5005/'];
 
 const config = {
 	defaults: {
