@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('@financial-times/n-internal-tool');
-const path = require('path');
 const fixtures = require('./fixtures.json');
 const chalk = require('chalk');
 const errorHighlight = chalk.bold.red;
@@ -19,7 +18,6 @@ const app = module.exports = express({
 	s3o: false,
 	viewsDirectory: '/demos',
 	layoutsDir: 'demos',
-	viewsDirectory: '/demos',
 	partialsDirectory: process.cwd(),
 	directory: process.cwd()
 });

@@ -15,9 +15,9 @@ demo-build:
 demo: demo-build
 	@node demos/app
 
-#a11y: demo-build
-	#@node .pa11yci.js
-	# @PA11Y=true node demos/app
-	#@$(DONE)
+a11y: demo-build
+	@node .pa11yci.js
+	@PA11Y=true node demos/app
+	@$(DONE)
 
-test: verify unit-test
+test: verify unit-test a11y
