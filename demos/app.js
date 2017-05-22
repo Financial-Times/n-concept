@@ -1,6 +1,6 @@
 'use strict';
 
-const express = require('@financial-times/n-express');
+const express = require('@financial-times/n-internal-tool');
 const path = require('path');
 const fixtures = require('./fixtures.json');
 const chalk = require('chalk');
@@ -9,12 +9,16 @@ const highlight = chalk.bold.green;
 
 const app = module.exports = express({
 	name: 'public',
+	systemCode: 'n-concept-demo',
 	withFlags: false,
 	withHandlebars: true,
 	withNavigation: false,
 	withAnonMiddleware: false,
 	hasHeadCss: false,
-	layoutsDir: path.join(process.cwd(), '/bower_components/n-ui/layout'),
+	demo: true,
+	s3o: false,
+	viewsDirectory: '/demos',
+	layoutsDir: 'demos',
 	viewsDirectory: '/demos',
 	partialsDirectory: process.cwd(),
 	directory: process.cwd()
@@ -23,7 +27,7 @@ const app = module.exports = express({
 app.get('/', (req, res) => {
 	res.render('demo', Object.assign({
 		title: 'Test App',
-		layout: 'vanilla',
+		layout: 'demo-layout',
 	}, fixtures));
 });
 
