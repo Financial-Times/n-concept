@@ -29,7 +29,7 @@
     "@financial-times/n-image": "^4.9.0"
   },
   "scripts": {
-    "pre-commit": "make verify && node_modules/.bin/secret-squirrel"
+    "pre-commit": "make verify && node_modules/.bin/secret-squirrel",
     "pre-push": "make test"
   }
 }
