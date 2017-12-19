@@ -20,12 +20,12 @@
 }
 
 .card__concept-article {
+	@include oTypographySerif(0);
 	margin: 8px 0 0;
 	padding-left: 15px;
 	position: relative;
-	@include oTypographySerif(0);
 
-	&:before {
+	&::before {
 		@include oIconsGetIcon('arrow-right', oColorsGetColorFor('myft'), 20);
 		content: '';
 		position: absolute;
